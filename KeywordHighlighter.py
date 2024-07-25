@@ -5,20 +5,60 @@ reviews = [
         "Poor quality product. Wouldn't recommend it to anyone.",
         "The product was average. Nothing extraordinary about it."
     ]
-#def keyword_check(text):
-cap_word = []
-for word in reviews:
-        if word == 'good':
-            cap_word.append("GOOD")
-        elif word == "excellent":
-            cap_word.append("EXCELLENT")
-        elif word == "bad":
-            cap_word.append("BAD")
-        elif word == "Poor":
-            cap_word.append("POOR")
-        elif word == "average":
-            cap_word.append("AVERAGE")
-        print(cap_word)
+def cap_keyword(reviews):
+    keyword = "good"
+    cap_reviews = []
+    for review in reviews:
+        if keyword in review:
+            review = review.replace(keyword,keyword.upper())
+            cap_reviews.append(review)
+    return cap_reviews 
+def cap_keyword1(reviews):
+    keyword = "excellent"
+    cap_reviews = []
+    for review in reviews:
+        if keyword in review:
+            review = review.replace(keyword,keyword.upper())
+            cap_reviews.append(review)
+    return cap_reviews 
+     
+def cap_keyword2(reviews):
+    keyword = "bad"
+    cap_reviews = []
+    for review in reviews:
+        if keyword in review:
+            review = review.replace(keyword,keyword.upper())
+            cap_reviews.append(review)
+    return cap_reviews 
+def cap_keyword3(reviews):
+    keyword = "quality"
+    cap_reviews = []
+    for review in reviews:
+        if keyword in review:
+            review = review.replace(keyword,keyword.upper())
+            cap_reviews.append(review)
+    return cap_reviews 
+def cap_keyword4(reviews):
+    keyword = "average"
+    cap_reviews = []
+    for review in reviews:
+        if keyword in review:
+            review = review.replace(keyword,keyword.upper())
+            cap_reviews.append(review)
+    return cap_reviews 
+               
+     
+cap_review = cap_keyword(reviews)
+print(cap_review)
+cap_review1 = cap_keyword1(reviews)
+print(cap_review1)
+cap_review2 = cap_keyword2(reviews)
+print(cap_review2)
+cap_review3 = cap_keyword3(reviews)
+print(cap_review3)
+cap_review4 = cap_keyword4(reviews)
+print(cap_review4)
+
 
 
 
